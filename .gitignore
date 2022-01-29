@@ -1,2 +1,9 @@
 node_modules
 dist
+/webpack.config.js
+/.editorconfig
+/.idea/.gitignore
+/.idea/discord.xml
+/.idea/modules.xml
+/.idea/webpack.iml
+/.idea/vcs.xml
