@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap')
 
 $font-stack :'Open Sans',sans-serif
+$bullet-color : #3B3B3B
+$content-line: "\00BB"
+$hat-style: 30px
 //font-fam
 body
   background: #E2E1E6
@@ -30,8 +33,28 @@ header
     li
       padding: 0px 25px 0px 25px
       border-right: 2px black dotted
+.main-section
+  flex-flow: row wrap
+  display: flex
+  justify-content: space-evenly
+  .aside-hat::before
+    content: $content-line
+  .aside-menu
+    margin-left: 5px
+    width: 40%
+    ul
+    li
+      list-style: none
+      margin: 2px
+    li::before
+      content: $content-line
+      color: $bullet-color
 .intro
-  h1
-    border-bottom: 1px solid
+  margin-left: 10px
+  width: 55%
+  .section-hat
+    font-style: $font-stack
+    font-size: $hat-style
+    border-bottom: 1px solid #D4D3D8
 
 
