@@ -7,3 +7,4 @@ dist
 /.idea/modules.xml
 /.idea/webpack.iml
 /.idea/vcs.xml
+/.idea/watcherTasks.xml

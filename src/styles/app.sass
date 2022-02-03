@@ -1,5 +1,5 @@
-@import "some"
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap')
 
 $font-stack :'Open Sans',sans-serif
 $bullet-color : #3B3B3B
@@ -7,8 +7,10 @@ $content-line: "\00BB"
 $hat-style: 30px
 $background: #C8B6DC
 //font-fam
+//
 body
   background: #E2E1E6
+  margin: 0
 header
   display: flex
   background: linear-gradient(to left, #6EA4D0, #9AD4DF 50%, #A9ACE3 100%)
@@ -21,7 +23,6 @@ header
     width: 200px
     height: 230px
 
-
 .navigation-bar
   display: flex
   margin: 10px 10px 10px 10px
@@ -29,58 +30,53 @@ header
   font-family: $font-stack
   flex-direction: row
   justify-content: center
+  border: 1px #D4D3D8 solid
   ul
     display: flex
     list-style-type: none
     flex-wrap: wrap
-    li
-      padding: 0px 25px 0px 25px
+    li:not(:last-child)
+      padding: 0 25px 0 25px
       border-right: 2px black dotted
-
+    li:last-child
+      padding-left: 25px
 
 .main-section
   display: flex
   justify-content: center
-  flex-wrap: wrap
-  .aside-hat::before
-    content: $content-line
-  .aside-menu
-    margin-left: 2px
-    ul
-    li
-      list-style: none
-      margin: 2px
-    li::before
-      content: $content-line
-      color: $bullet-color
-.intro
-  width: 65%
-  .section-hat
-    font-style: $font-stack
+  padding: 10px
+  margin: 10px
+  .first-side
+    justify-content: center
+    flex-direction: column
+    margin-right: 10px
+    .section-hat
+      border-bottom: 2px #D4D3D8 solid
+      font-size: $hat-style
+      font-style: $font-stack
+  .article-body
+    margin-top: 40px
+    display: flex
+  .first-article-body
+    padding: 10px
+    border-right: 2px #D4D3D8 solid
+    margin-right: 30px
+  .hat
     font-size: $hat-style
-    border-bottom: 1px solid #D4D3D8
+    font-style: $font-stack
+.second-side
+    max-width: 250px
+    ul
+      text-decoration: none
+      li
+        list-style: none
+      li::before
+        content: $content-line
+    .content-hat
+      margin: 0
+    .content-hat::before
+      content: $content-line
 
-footer
-  display: flex
-  background: $background
-  font-family: $font-stack
-  justify-content: center
-  font-size: 12px
-
-
-.articles-side
-  display: flex
-  justify-content: space-between
-  margin-bottom: 100px
-.first-article-body
-  border-right: 1px solid black
-.first-article
-  font-size: $hat-style
-.second-article
-  font-size: $hat-style
-.second-article-body
-  margin-left: 30px
-  margin-right: 30px
 .button
   background-color: #DDD3DB
   border: 1px solid black
@@ -90,7 +86,12 @@ footer
   text-decoration: none
   display: inline-block
   font-size: 16px
-.aside-menu
-  width: 30%
-  h1::before
-    content: $content-line
+
+footer
+  display: flex
+  background: $background
+  font-family: $font-stack
+  justify-content: center
+  font-size: 12px
+
+
